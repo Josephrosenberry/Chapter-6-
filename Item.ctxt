@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=itemName\ itemPrice\ numPurchased
+comment0.target=Item(java.lang.String,\ double,\ int)
+comment0.text=\r\n\ Create\ a\ new\ item\ with\ the\ given\ attributes.\r\n
+comment1.params=
+comment1.target=java.lang.String\ toString()
+comment1.text=\r\n\ Return\ a\ string\ with\ the\ information\ about\ the\ item\r\n
+comment2.params=
+comment2.target=double\ getPrice()
+comment2.text=\r\n\ Returns\ the\ unit\ price\ of\ the\ item\r\n
+comment3.params=
+comment3.target=java.lang.String\ getName()
+comment3.text=\r\n\ Returns\ the\ name\ of\ the\ item\r\n
+comment4.params=
+comment4.target=int\ getQuantity()
+comment4.text=\r\n\ Returns\ the\ quantity\ of\ the\ item\r\n
+numComments=5
