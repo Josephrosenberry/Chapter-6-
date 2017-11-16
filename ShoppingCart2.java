@@ -1,38 +1,57 @@
+/**
+ * Creates a shopping cart that can extend the size of the cart if the user chooses to
+ * @version 11/16/2017
+ * @author Joseph Rosenberry
+ */
 import java.text.NumberFormat;
-public class ShoppingCart
+public class ShoppingCart2
 {
     private int itemCount; // total number of items in the cart
     private double totalPrice; // total price of items in the cart
     private int capacity; // current cart capacity
     private Item[] cart;
-    // -----------------------------------------------------------
-    // Creates an empty shopping cart with a capacity of 5 items.
-    // -----------------------------------------------------------
-    public ShoppingCart()
+    /**
+     * Creates a shopping cart of 5 items
+     */
+    public ShoppingCart2()
     {
         capacity = 5;
         itemCount = 0;
         totalPrice = 0.0;
         cart = new Item[capacity];
     }
-    // -------------------------------------------------------
-    // Adds an item to the shopping cart.
-    // -------------------------------------------------------
+    /**
+     * adds an item to a shopping cart
+     */
     public void addToCart(String itemName, double unitPrice, int quantity)
     {
+        if (itemCount == capacity){
+            increaseSize();
+        }
         cart[itemCount] = new Item(itemName, unitPrice, quantity);
-        totalPrice += (unitPrice * quantity);
+        totalPrice += (quantity * unitPrice);
         itemCount++;
-
     }
+    
+    /**
+     * increases the capacity of shopping cart by doubling it
+     */
+    private void increaseSize() {
+        Item[] temp = new Item[cart.length + 3];
+
+        for (int i = 0; i < cart.length; i++) {
+            temp[i] = cart[i];
+        }
+        cart = temp;
+        }
+       
     
     public double getTotalPrice(){
         return totalPrice;
     }
-    // -------------------------------------------------------
-    // Returns the contents of the cart together with
-    // summary information.
-    // -------------------------------------------------------
+    /**
+     * Returns all the information for the items in the shopping cart
+     */
     public String toString()
     {
         NumberFormat fmt = NumberFormat.getCurrencyInstance();

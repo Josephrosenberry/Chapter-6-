@@ -1,17 +1,16 @@
 #BlueJ class context
 comment0.params=
-comment0.target=ShoppingCart()
-comment0.text=\r\n\ creates\ a\ shopping\ cart\ with\ a\ capacity\ of\ 5\r\n
+comment0.target=ShoppingCart2()
+comment0.text=\r\n\ Creates\ a\ shopping\ cart\ of\ 5\ items\r\n
 comment1.params=itemName\ unitPrice\ quantity
 comment1.target=void\ addToCart(java.lang.String,\ double,\ int)
-comment1.text=\r\n\ adds\ an\ item\ to\ the\ shopping\ cart\r\n
+comment1.text=\r\n\ adds\ an\ item\ to\ a\ shopping\ cart\r\n
 comment2.params=
 comment2.target=void\ increaseSize()
 comment2.text=\r\n\ increases\ the\ capacity\ of\ shopping\ cart\ by\ doubling\ it\r\n
 comment3.params=
 comment3.target=double\ getTotalPrice()
-comment3.text=\r\n\ When\ the\ getTotalPrice\ method\ is\ called,\ it\ returns\ the\ total\ price\ of\ the\ items\r\n
 comment4.params=
 comment4.target=java.lang.String\ toString()
-comment4.text=\r\n\ returns\ all\ the\ information\ of\ the\ item\ in\ the\ cart.\r\n
+comment4.text=\r\n\ Returns\ all\ the\ information\ for\ the\ items\ in\ the\ shopping\ cart\r\n
 numComments=5
