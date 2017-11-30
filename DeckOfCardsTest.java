@@ -1,17 +1,17 @@
-// **********************************************************************
-// DeckOfCardsTest.java
-//
-// Tester program to shuffle and deal a deck of Card objects
-// **********************************************************************
+/**
+ * Shuffles out a deck of 52 cards
+ * @author Joseph Rosenberry
+ * @version 11/30/2017
+ */
 public class DeckOfCardsTest
 {
     public static void main (String[] args)
     {
         DeckOfCards myDeckOfCards = new DeckOfCards();
         myDeckOfCards.shuffle(); // put Card objects in random order
-        // -----------------------------------------------------------
-        // print all 52 Cards in the order in which they are dealt
-        // -----------------------------------------------------------
+        /**
+         * prints all 52 cards
+         */
         for (int i = 0; i < 13; i++)
         {
             // printf method used for formatting output

@@ -1,18 +1,18 @@
-// **********************************************************************
-// DeckOfCards.java
-//
-// Contains a deck of Card objects. Methods to shuffle and deal Cards.
-// **********************************************************************
+/**
+ * Creates a deck of cards, with 13 different faces and 3 different suits
+ * @author Joseph Rosenberry
+ * @version 11/30/2017
+ */
 public class DeckOfCards {
     private Card deck[];
     private int currentCard;
     private final int NUMBER_OF_CARDS = 52;
-    private String faces[] = {"Ace", "Deuce", "Three", "Four", "Five", "Six",
+    private String faces[] = {"Ace", "Two", "Three", "Four", "Five", "Six",
             "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"};
     private String suits[] = { "Hearts", "Diamonds", "Clubs", "Spades" };
-    // -----------------------------------------------------------
-    // Constructor fills a deck array with Card objects.
-    // -----------------------------------------------------------
+    /**
+     * Fills a deck array with card objects
+     */
     public DeckOfCards()
     {
         deck = new Card[ NUMBER_OF_CARDS ];
@@ -21,9 +21,9 @@ public class DeckOfCards {
         for (int count = 0; count < deck.length; count ++)
             deck [ count ] = new Card(faces[count % 13], suits [count / 13]);
     } // end DeckOfCards constructor
-    // -----------------------------------------------------------
-    // Shuffle deck of Cards by randomly switching all cards in deck.
-    // -----------------------------------------------------------
+    /**
+     * Shuffles a deck of cards
+     */
     public void shuffle()
     {
         for (int first = 0; first < deck.length; first++)
@@ -32,12 +32,13 @@ public class DeckOfCards {
             int second = (int)(Math.random() * 52);
             // swap current Card with randomly selected Card
             Card temp = deck[ first ];
-            deck[ first ]  = temp;
+            deck[ first ]  = deck[second];
+            deck [ second ] = temp;
         }
     } // end method shuffle
-    // -----------------------------------------------------------
-    // Deals one Card.
-    // -----------------------------------------------------------
+    /**
+     * Deals a card
+     */
     public Card dealCard()
     {
         // determine whether Cards remain to be dealt
